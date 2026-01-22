@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K Wallet – Register</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: Arial, sans-serif; background:#f5f5f5; color:#222; }
+
+    /* NAVIGATION BAR */
+    nav {
+      background: #0a7c3a;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav h1 { color:white; font-size:24px; }
+    nav ul { list-style:none; display:flex; gap:20px; }
+    nav ul li a { color:white; text-decoration:none; font-weight:bold; transition:0.3s; }
+    nav ul li a:hover { color:#ffd700; }
+
+    /* HEADER */
+    header {
+      text-align:center; padding:60px 20px;
+      background: linear-gradient(120deg, #0a7c3a, #0c5f2a);
+      color:white;
+    }
+    header h2 { font-size:36px; margin-bottom:10px; }
+    header p { font-size:18px; }
+
+    /* REGISTER FORM SECTION */
+    .register-section {
+      max-width:500px; margin:40px auto; padding:40px 20px;
+      background:white; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    }
+    .register-section h3 { text-align:center; margin-bottom:20px; color:#0a7c3a; }
+    input {
+      width:100%; padding:12px; margin-bottom:15px;
+      border:1px solid #ccc; border-radius:6px; font-size:16px;
+      transition: border-color 0.3s;
+    }
+    input:focus { border-color:#0a7c3a; outline:none; }
+
+    button {
+      width:100%; background:black; color:white; padding:12px;
+      border:none; border-radius:6px; font-weight:bold; cursor:pointer;
+      transition: transform 0.3s, background 0.3s;
+    }
+    button:hover { transform: scale(1.05); background:#333; }
+
+    /* FOOTER */
+    footer {
+      background:#111; color:white; text-align:center; padding:30px 20px; margin-top:40px;
+    }
+    footer a { color:white; margin:0 10px; font-size:20px; text-decoration:none; transition:0.3s; }
+    footer a:hover { color:#ffd700; }
+    footer .footer-links { font-size:14px; margin-top:10px; }
+    footer .footer-links a { font-size:14px; margin:0 5px; }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION BAR -->
+<nav>
+  <h1>K Wallet</h1>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="features.html">Features</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="register.html">Register</a></li>
+  </ul>
+</nav>
+
+<!-- HEADER -->
+<header>
+  <h2>Create Your K Wallet Account</h2>
+  <p>Sign up today and join the future of digital payments</p>
+</header>
+
+<!-- REGISTER FORM -->
+<section class="register-section">
+  <h3>Sign Up</h3>
+  <form>
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email" required>
+    <input type="tel" placeholder="Phone Number" required>
+    <input type="password" placeholder="Password" required>
+    <input type="password" placeholder="Confirm Password" required>
+    <button type="submit">Register</button>
+  </form>
+  <p style="text-align:center; margin-top:15px;">
+    Already have an account? <a href="index.html" style="color:#0a7c3a; text-decoration:none;">Login</a>
+  </p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 K Wallet | Built in Kenya</p>
+  <div>
+    <a href="#">🐦</a>
+    <a href="#">📘</a>
+    <a href="#">📸</a>
+  </div>
+  <div class="footer-links">
+    <a href="index.html">Home</a> |
+    <a href="features.html">Features</a> |
+    <a href="contact.html">Contact</a> |
+    <a href="register.html">Register</a>
+  </div>
+</footer>
+<script>
+  const form = document.querySelector('form');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault(); // prevent actual page reload
+
+    const name = form.querySelector('input[type="text"]').value;
+    const email = form.querySelector('input[type="email"]').value;
+
+    // Simple validation: passwords match
+    const password = form.querySelectorAll('input[type="password"]')[0].value;
+    const confirmPassword = form.querySelectorAll('input[type="password"]')[1].value;
+
+    if(password !== confirmPassword) {
+      alert("Passwords do not match!");
+      return;
+    }
+
+    // Simulated registration success
+    alert(`Welcome, ${name}! Your K Wallet account has been created.\nWe sent a confirmation to: ${email}`);
+    
+    form.reset(); // clears the form
+  });
+</script>
+</body>
+</html>

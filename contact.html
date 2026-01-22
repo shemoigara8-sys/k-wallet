@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K Wallet – Contact</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: Arial, sans-serif; background:#f5f5f5; color:#222; }
+
+    /* NAVIGATION BAR */
+    nav {
+      background: #0a7c3a;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav h1 { color:white; font-size:24px; }
+    nav ul { list-style:none; display:flex; gap:20px; }
+    nav ul li a { color:white; text-decoration:none; font-weight:bold; transition:0.3s; }
+    nav ul li a:hover { color:#ffd700; }
+
+    /* HEADER */
+    header {
+      text-align:center; padding:80px 20px;
+      background: linear-gradient(120deg, #0a7c3a, #0c5f2a);
+      color:white;
+    }
+    header h2 { font-size:36px; margin-bottom:10px; }
+    header p { font-size:18px; }
+
+    /* CONTACT SECTION */
+    .contact-section {
+      max-width:700px; margin:40px auto; padding:40px 20px;
+      background:white; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);
+      text-align:center;
+    }
+    .contact-section p { margin-bottom:15px; font-size:16px; }
+    .contact-section h3 { margin:20px 0 10px; }
+
+    /* FORM STYLING */
+    input, textarea {
+      width:100%; padding:12px; margin-bottom:15px;
+      border:1px solid #ccc; border-radius:6px; font-size:16px;
+      transition: border-color 0.3s;
+    }
+    input:focus, textarea:focus { border-color:#0a7c3a; outline:none; }
+
+    button {
+      background:black; color:white; padding:12px 25px; border:none;
+      border-radius:6px; font-weight:bold; cursor:pointer; transition: transform 0.3s, background 0.3s;
+    }
+    button:hover { transform: scale(1.05); background:#333; }
+
+    /* BACK BUTTON */
+    .btn {
+      display:inline-block; margin-top:15px; background:black; color:white;
+      padding:12px 25px; border-radius:6px; text-decoration:none; font-weight:bold;
+      transition: transform 0.3s, background 0.3s;
+    }
+    .btn:hover { transform: scale(1.05); background:#333; }
+
+    /* FOOTER */
+    footer {
+      background:#111; color:white; text-align:center; padding:30px 20px; margin-top:40px;
+    }
+    footer a { color:white; margin:0 10px; font-size:20px; text-decoration:none; transition:0.3s; }
+    footer a:hover { color:#ffd700; }
+    footer .footer-links { font-size:14px; margin-top:10px; }
+    footer .footer-links a { font-size:14px; margin:0 5px; }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION BAR -->
+<nav>
+  <h1>K Wallet</h1>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="features.html">Features</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HEADER -->
+<header>
+  <h2>Contact K Wallet</h2>
+  <p>We’re here to help! Reach out anytime.</p>
+</header>
+
+<!-- CONTACT INFO + FORM -->
+<section class="contact-section">
+  <p><strong>Founder:</strong> Oigara Shem</p>
+  <p><strong>Email:</strong> shemoigara8@gmail.com</p>
+  <p><strong>Location:</strong> Nairobi, Kenya</p>
+
+  <h3>Send us a message:</h3>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <a href="index.html" class="btn">← Back to Home</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 K Wallet | Built in Kenya</p>
+  <div>
+    <a href="#">🐦</a>
+    <a href="#">📘</a>
+    <a href="#">📸</a>
+  </div>
+  <div class="footer-links">
+    <a href="index.html">Home</a> |
+    <a href="features.html">Features</a> |
+    <a href="contact.html">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>
